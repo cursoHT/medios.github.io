@@ -1,0 +1,55 @@
+body {
+	background-color: gray;
+}
+.a, .b, .c {
+	width: 25%;
+	height: 100px;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	box-shadow: 10px 5px 20px #2fffec;
+}
+.a {
+	background-color: #FFDEDE;
+	margin-left: 100px;
+
+}
+.b {
+	background-color: #DFFFDE;
+}
+.c {
+	background-color: #FFECBA;
+}
+@media (max-width: 618px) {
+	.a, .b, .c {
+		width: 80%;
+		height: 50px;
+		display: block;
+		float: none;
+		margin-left: 10px;
+	}
+}
+/*Con la instrucción de :nth-""("")seleccionamos
+la posición que queremos expresamente que se 
+actualice de la manera deseada. En este caso con 
+"child" ("3"), estamos cogiendo del div la tercera 
+posición para cambiar. */
+div:nth-child(3) {
+	box-shadow: 10px 5px 20px #FFFBDD;
+}
+div:nth-child(2) {
+	box-shadow: 10px 5px 20px #E8F7F3;
+}
+div:nth-child(1) {
+	box-shadow: 10px 5px 20px #FDDDE8;
+}
+/*Para poder hacer esto mismo con el tipo de 
+archivo deseado, cogemos la pseudoclase: 
+nth-of-type("") y si */
+div:nth-of-type(mp3) {
+	background-color: blue;
+}
+p::selection {
+	background-color: whitesmoke;
+	color: darkred;
+}
